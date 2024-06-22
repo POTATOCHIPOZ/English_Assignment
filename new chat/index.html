@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Assignment - Alexander Y</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external stylesheet -->
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#lion">Lion</a>
+        <a href="#the-boat">The Boat</a>
+        <a href="#conclusion">Conclusion</a>
+    </div>
+
+    <div class="section" id="home">
+        <div class="content">
+            <h1>English Assignment</h1>
+            <h2>Alexander Y</h2>
+            <p>Welcome to my presentation on how composers have harnessed the potential of modern communication technologies to bring unknown or unrealized events to life for modern responders.</p>
+            <audio controls>
+                <source src="audio/home.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+    
+    <div class="section" id="lion">
+        <div class="content">
+            <h2>Text 1: "Lion" (Movie)</h2>
+            <p>"Lion" is a biographical drama film that tells the true story of Saroo Brierley, who used Google Earth to find his lost family in India after being separated for 25 years. Directed by Garth Davis, the film stars Dev Patel, Rooney Mara, and Nicole Kidman. "Lion" showcases the emotional journey of Saroo, who was adopted by an Australian family after getting lost on a train as a child.</p>
+            <audio controls>
+                <source src="audio/lion-1.mp3" type="audio/mpeg">
+            </audio>
+            <video controls class="click-to-fullscreen">
+                <source src="lion_ clip.mp4" type="video/mp4">
+            </video>
+            <p>The movie effectively uses modern technology to depict Saroo's journey of rediscovery. One of the pivotal scenes in the movie shows Saroo meticulously using Google Earth to scan the Indian landscape, trying to match his fragmented childhood memories with satellite images. This portrayal highlights the incredible power of digital mapping technologies in reuniting families and solving personal mysteries that were once thought unsolvable.</p>
+            <audio controls>
+                <source src="audio/lion-2.mp3" type="audio/mpeg">
+            </audio>
+            <a href="https://www.youtube.com/watch?v=Y7Bquwr8mQE&ab_channel=LaPazianS"></a><img src="saroo.jpg" alt="Lion Movie Image">
+            <p>The impact of the film goes beyond its narrative. "Lion" raises awareness about the plight of missing children and the emotional toll on families. It shows how modern communication technologies like Google Earth can bridge vast distances and reconnect lives. The film's storytelling, combined with the use of real-life technology, brings an unprecedented level of realism and emotional depth to the viewer.</p>
+            <audio controls>
+                <source src="audio/lion-3.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+    
+    <div class="section" id="the-boat">
+        <div class="content">
+            <h2>Text 2: "The Boat" (Interactive Webpage)</h2>
+            <p>"The Boat" is an interactive graphic novel that immerses the reader in the experiences of Vietnamese refugees. This digital adaptation of Nam Le’s short story, created by SBS Australia, combines visual storytelling with interactive elements to engage users deeply. "The Boat" allows readers to navigate through the story at their own pace, exploring different perspectives and emotional layers.</p>
+            <audio controls>
+                <source src="audio/the-boat-1.mp3" type="audio/mpeg">
+            </audio>
+            <video controls class="click-to-fullscreen">
+                <source src="yes.mp4" type="video/mp4">
+            </video>
+            <p>The interactive webpage utilizes modern web technologies such as HTML5, CSS3, and JavaScript to create an immersive and dynamic narrative experience. The use of parallax scrolling, animated graphics, and ambient sound effects draws readers into the harrowing journey of the refugees. Each interactive element is meticulously designed to enhance the storytelling, making the historical and emotional aspects of the story more tangible to modern audiences.</p>
+            <audio controls>
+                <source src="audio/the-boat-2.mp3" type="audio/mpeg">
+            </audio>
+            <img src="boat.jpg" alt="The Boat Interactive Webpage">
+            <p>"The Boat" leverages the potential of modern digital communication to bring past events to life. The interactive format allows for a more personalized and engaging experience compared to traditional text-based media. By incorporating multimedia elements, the story transcends the limitations of conventional storytelling, providing a vivid and impactful exploration of refugee experiences.</p>
+            <audio controls>
+                <source src="audio/the-boat-3.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+    
+    <div class="section" id="conclusion">
+        <div class="content">
+            <h2>Conclusion</h2>
+            <p>Both "Lion" and "The Boat" demonstrate how modern communication technologies can be harnessed to bring unknown or unrealized events to life for contemporary audiences. By leveraging the capabilities of film and interactive media, these works create powerful, engaging experiences that resonate with modern responders. They show that technology can serve as a bridge, connecting us to stories and experiences that might otherwise remain distant or forgotten.</p>
+            <audio controls>
+                <source src="audio/conclusion.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+    <div class="back-to-top" id="backToTop">
+        Back to Top
+    </div>
+
+    <script>
+        // Smooth scroll for navbar links
+        document.querySelectorAll('.navbar a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Back to top button functionality
+        window.onscroll = function() {
+            let backToTop = document.getElementById('backToTop');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTop.style.display = "block";
+            } else {
+                backToTop.style.display = "none";
+            }
+        };
+
+        document.getElementById('backToTop').onclick = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        // Fullscreen video functionality
+        document.querySelectorAll('.click-to-fullscreen').forEach(video => {
+            video.addEventListener('click', function() {
+                if (this.requestFullscreen) {
+                    this.requestFullscreen();
+                } else if (this.mozRequestFullScreen) { /* Firefox */
+                    this.mozRequestFullScreen();
+                } else if (this.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                    this.webkitRequestFullscreen();
+                } else if (this.msRequestFullscreen) { /* IE/Edge */
+                    this.msRequestFullscreen();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
